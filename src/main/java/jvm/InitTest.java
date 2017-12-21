@@ -1,5 +1,7 @@
 package jvm;
 
+import org.testng.annotations.Test;
+
 /**
  * @author zhangsy
  * @date 2017/11/21
@@ -28,4 +30,10 @@ public class InitTest {
         }
     }
 
+    @Test
+    public void dir() {
+        //工程所在根目录
+        String property = System.getProperty("user.dir");
+        System.out.println(property);
+    }
 }
