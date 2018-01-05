@@ -1,10 +1,12 @@
 package innerclass;
 
+import org.testng.annotations.BeforeClass;
+
 /**
  * @author zhangsy
  * @date 2017/12/28
  */
-public abstract class Human {
+public class Human {
 
     private String name;
     private static final int EYES = 2;
@@ -13,9 +15,16 @@ public abstract class Human {
     void sleep() {}
 
     //这是一个抽象方法，那么类必须注明为抽象类，且派生类必须重写抽象方法
-    public abstract void run();
+//    public abstract void run();
 
     public void eat() {
-        System.out.println("everyone needs food");
+        System.out.println("Human needs food");
+    }
+
+//    @BeforeClass
+    public void beforeClass() {
+        System.out.println("Human before");
+//        run();
+        this.eat();
     }
 }

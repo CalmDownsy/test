@@ -1,8 +1,6 @@
 package timer;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -36,6 +34,14 @@ public class ExecutorServiceFactory {
 
     public ExecutorService createCachePool() {
         return Executors.newCachedThreadPool(getFactory());
+    }
+
+    //自定义线程池
+    public ExecutorService createSelfPool() {
+        //最小线程池数量，如果线程数量小于该值，新提交任务，即使有空闲线程，也会再创建一个；
+        //线程数量等于最小线程池数量，但缓冲队列未满时，会将新提交任务放到workQueue中，按照FIFO原则，有空闲线程则执行缓冲队列任务；
+        //线程数量大于最小线程池数量，缓冲队列已满，就会新建线程执行任务
+        return new ThreadPoolExecutor(3, 5, 60L, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
     }
 
 
