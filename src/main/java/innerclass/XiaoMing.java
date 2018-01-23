@@ -37,7 +37,13 @@ public class XiaoMing extends Human implements Action {
         System.out.println("test begin");
         XiaoMing xm = new XiaoMing();
         xm.beforeClass();
+
         Human human = new XiaoMing();
+        XiaoMing xiaoMing = (XiaoMing) human;
+
+
+        Human hm = new Human();
+        XiaoMing xiaoMing1 = (XiaoMing) hm;
         human.beforeClass();
     }
 }

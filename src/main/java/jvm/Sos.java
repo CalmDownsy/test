@@ -12,11 +12,11 @@ public class Sos implements InterfaceA, InterfaceB {
     }
 
     public void run() {
-
+        System.out.println(new F().s());
     }
 
     public void fly() {
-
+        System.out.println(new M().k());
     }
 
     class F extends Ff {
