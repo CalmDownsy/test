@@ -9,7 +9,15 @@ import org.testng.annotations.Test;
  */
 public class XiaoMing extends Human implements Action {
 
-//    @Override
+    {
+        System.out.println("块");
+    }
+
+    public XiaoMing() {
+        eat();
+    }
+
+    //    @Override
 //    @BeforeClass
     public void beforeClass() {
         say();
@@ -36,14 +44,15 @@ public class XiaoMing extends Human implements Action {
     public void test() {
         System.out.println("test begin");
         XiaoMing xm = new XiaoMing();
-        xm.beforeClass();
-
+//        xm.beforeClass();
+//
         Human human = new XiaoMing();
         XiaoMing xiaoMing = (XiaoMing) human;
 
+        System.out.println(345678);
 
         Human hm = new Human();
         XiaoMing xiaoMing1 = (XiaoMing) hm;
-        human.beforeClass();
+//        human.beforeClass();
     }
 }
