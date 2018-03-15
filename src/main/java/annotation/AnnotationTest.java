@@ -1,6 +1,6 @@
 package annotation;
 
-import java.lang.annotation.Annotation;
+import org.testng.annotations.Test;
 
 /**
  * @author zhangsy
@@ -22,5 +22,10 @@ public class AnnotationTest {
     @TestForAnno(type = "method", id = 4)
     public void run() {
         System.out.println("someone running!!");
+    }
+
+    @Test(description = "测试spring扫描自定义注解")
+    public void test() {
+        System.out.println("hello spring");
     }
 }

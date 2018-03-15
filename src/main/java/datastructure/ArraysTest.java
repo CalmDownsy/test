@@ -1,11 +1,9 @@
 package datastructure;
 
+import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author zhangsy
@@ -32,6 +30,5 @@ public class ArraysTest {
         System.out.println(Arrays.asList(arr3).size());
 
         LinkedList<String> ll = new LinkedList<String>();
-
     }
 }
