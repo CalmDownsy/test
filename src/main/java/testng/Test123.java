@@ -22,6 +22,11 @@ public class Test123 {
     public void test3() throws InterruptedException {
         System.out.println(333);
         Thread.sleep(1000);
-        System.out.println("3333");
+        System.out.println("哈哈哈");
+    }
+
+    @Test
+    public void sda() {
+        System.out.println("jw加上");
     }
 }
